@@ -1,0 +1,140 @@
+// importing calendar package for automatic choosing particular day
+import java.util.Calendar;
+// creating class robot
+class Robot {
+/* initializing variables ca that will hold the calendar properties and variable day
+     will hold particular day */
+     var ca = Calendar.getInstance();
+    var day = ca.get(Calendar.DAY_OF_WEEK);
+// creating function day that will automatically chooses the number according to day .
+    fun day() {
+
+        when (day) {
+            1 -> println("Day Monday ")
+            2 -> println("Day Tuesday ")
+            3 -> println("Day wednesday")
+            4 -> println("Day Thursday ")
+            5 -> println("Day Friday ")
+            6 -> println("Day Saturday")
+            7 -> println("Day Sunday ")
+        }
+    }
+// creating  function alarm that will tell us on which day alarm will ring at a particular time
+    fun alarm() {
+
+
+        when (day) {
+            1 -> println("Ring alarm at : 6.00 Am")
+            2 -> println(" Ring alarm at: 6.30 Am")
+            3 -> println(" Ring alarm at: 6.40 Am")
+            4 -> println("Ring alarm at: 6.00 Am")
+            5 -> println(" Ring alarm at: 6.50 Am")
+            6 -> println(" Ring alarm at : 6.30 Am")
+            7 -> println("Ring alarm at : 8.00 Am")
+
+
+        }
+
+    }
+    // creating function makeCoffee that will tell the what type of coffee we will drink on a particular day
+
+
+    fun makeCoffee()
+    {
+
+        when(day)
+        {
+            1->println("Black coffee with 1 spoon sugar")
+            2->println("Milk coffee with 2 spoon sugar")
+            3->println("Milk coffee with 2 spoon sugar")
+            4->println("Black coffee with 0.5 spoon sugar")
+            5->println("Black coffee with no sugar")
+            6->println("Milk coffee with 2 spoon sugar")
+            7->println("Black coffee with 1 spoon sugar")
+
+
+        }
+
+    }
+    //creating function heatTheWater this will tell us the temprature of water at a particular day
+    fun heatTheWater()
+    {
+
+
+        when(day)
+        {
+            1->println("Today you will bath at 35 degree")
+            2->println("Today you will bath at 10 degree")
+            3->println("Today you will bath at 25 degree")
+            4->println("Today you will bath at bath at 25 degree")
+            5->println("Today you will bath at 28 degree")
+            6->println("Today you will bath at 19 degree")
+            7->println("Today you  will bath at 22 degree")
+
+
+        }
+    }
+    // creating function books this will tell us about the schedule of books on that paricular day
+    fun books()
+    {
+        when(day)
+        {
+            1->println("Books:maths,sst,java,C")
+            2->println("Books:science,sst,C++,java")
+            3->println("Books:maths,Gk,science,C++")
+            4->println("Books:social,sst,maths,C")
+            5->println("Books:maths,sst,C,C++")
+            6->println("Books:GK,sst,Maths,C")
+            7->println("Books:maths,java,C,C++")
+        }
+    }
+    // creating function food  this will choose the random food from breakfast,lunch,and dinner and provide us the list on that particular day
+    fun food()
+    {
+        var breakfast=listOf("Panner","Fruits","sprouts","chocos","dal","juice","mango")
+
+        println("Breakfast: ${breakfast.random()}")
+        var lunch=listOf("rajma","panner","makahani dal","dal-rice","bottle","cabbage","chole")
+        println("Lunch: ${lunch.random()}")
+        var dinner=listOf("salad","fruits","icecream","pan","pav bhaji","monita","dosa")
+        println("dinner: ${dinner.random()}")
+
+
+
+
+    }
+    // creating function clothes this will tell us the clothes we will wear on that particular day
+    fun clothes()
+    {
+        when(day)
+        {
+            1->println("Blue Jeans,White Shirt")
+            2->println("Black Trouser,Blue Shirt")
+            3->println("Blue Jeans,blue Tshirt")
+            4->println("blue shirt,Jeans Blue")
+            5->println("black shirt,Jeans black")
+            6->println("Blue Shirt,Black Trouser")
+            7->println("Black jeans,red trouser")
+        }
+    }
+
+}
+// main function
+    fun main()
+    {
+        println("Hello Ricky I am your robot shavy and this is the schedule for day")
+// creating object of class Robot
+        val a=Robot()
+// now object will invokes all the functions
+            a.day()
+            a.alarm()
+            a.makeCoffee()
+            a.heatTheWater()
+            a.books()
+            a.food()
+            a.clothes()
+      }
+
+
+
+
